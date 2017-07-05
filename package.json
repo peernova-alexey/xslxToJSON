@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "async": "^2.5.0",
+    "lodash": "^4.17.4",
     "xlsx-to-json": "^0.3.0"
   }
 }

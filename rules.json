@@ -1,0 +1,734 @@
+[
+  {
+    "system": "DTD",
+    "resultFieldName": "externalId",
+    "originalFieldName": "EXTERNAL_ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "externalId",
+    "originalFieldName": "Trade Reference Identifier",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "tradeDate",
+    "originalFieldName": "TRADE_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "tradeDate",
+    "originalFieldName": "Trade Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "maturityDate",
+    "originalFieldName": "MATURITY_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "maturityDate",
+    "originalFieldName": "Scheduled Termination Date/Expiration Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "effectiveDate",
+    "originalFieldName": "EFFECTIVE_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "effectiveDate",
+    "originalFieldName": "Effective Date",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "counterpartyAccountNumber",
+    "originalFieldName": "DTCC COUNTERPARTY",
+    "rule": "Mapped via SDS File"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "counterpartyAccountNumber",
+    "originalFieldName": "Counterparty Account Number",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "dtccAccountNumber",
+    "originalFieldName": "DTCC TRADINGPARTY",
+    "rule": "Mapped via SDS File"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "dtccAccountNumber",
+    "originalFieldName": "DTCC Account Number",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "fixedRate",
+    "originalFieldName": "Fixed Rate",
+    "rule": "If FIXED_RT is not blank, take FIXED_RT. If blank, take which either PAYLEGCOUPON_RATE or RECLEGCOUPON_RATE is not 0. If both 0, take blank"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "fixedRate",
+    "originalFieldName": "Fixed Rate",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "notionalCCY",
+    "originalFieldName": "NOTIONAL CCY",
+    "rule": "If Product Group = IOS/MBX/PO then take CURRENCY_R, else take CE_NOTIONAL_CCY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "notionalCCY",
+    "originalFieldName": "Warehouse Current State Notional Currency",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "notionalAMT",
+    "originalFieldName": "NOTIONAL AMT",
+    "rule": "If Product Group = IOS/MBX/PO then take NOTIONAL, else take CE_NOTIONAL"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "notionalAMT",
+    "originalFieldName": "Warehouse Current State Notional Amount",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "independentPayer",
+    "originalFieldName": "Independent COUNTERPARTY",
+    "rule": "If COLL_INDEP_AMT_PERCENT less than 0 then take TRADING_PARTY, else COUNTERPARTY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "independentPayer",
+    "originalFieldName": "Independent Payer",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "independentReceiver",
+    "originalFieldName": "Independent TRADINGPARTY",
+    "rule": "If COLL_INDEP_AMT_PERCENT greater or equal 0 then take TRADING_PARTY, else COUNTERPARTY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "independentReceiver",
+    "originalFieldName": "Independent Receiver",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "fixedRatePayerBuyer",
+    "originalFieldName": "Fixed Rate Payer (Buyer)",
+    "rule": "If BUY_SELL_CO = BUY then TRADING_PARTY, = SELL then COUNTERPARTY. If blank then if RECLEGCOUPON_RATE = 0 then TRADING_PARTY, ELSE COUNTERPARTY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "fixedRatePayerBuyer",
+    "originalFieldName": "Fixed Rate Payer (Buyer)/Swaption Buyer",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "floatRatePayerSeller",
+    "originalFieldName": "Float Rate Payer(Seller)",
+    "rule": "If BUY_SELL_CO = BUY then TRADING_PARTY, = SELL then COUNTERPARTY. If blank then if PAYLEGCOUPON_RATE = 0 then TRADING_PARTY, ELSE COUNTERPARTY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "floatRatePayerSeller",
+    "originalFieldName": "Float Rate Payer (Seller)/Swaption Seller",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "calculationAgentBusinessCenterName",
+    "originalFieldName": "Calculation Agent Business Center Name",
+    "rule": "Derived (no change)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "calculationAgentBusinessCenterName",
+    "originalFieldName": "Calculation Agent Business Center Name",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "calculationAgentBusinessCenterCode",
+    "originalFieldName": "CALC_AGENT_BUSINESS_CENTER",
+    "rule": "If CALC_AGENT_BUSINESS_CENTER is null then CALC_AGENT_CITY, else CALC_AGENT_BUSINESS_CENTER (mapped via SDS file)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "calculationAgentBusinessCenterCode",
+    "originalFieldName": "Calculation Agent Business Center Code",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "referenceEntityId",
+    "originalFieldName": "CE_ISSUER_CODE_RED",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "referenceEntityId",
+    "originalFieldName": "Reference Entity ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "referenceEntityName",
+    "originalFieldName": "CE_REF_ENTITY",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "referenceEntityName",
+    "originalFieldName": "Reference Entity Name",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "independentPercent",
+    "originalFieldName": "COLL_INDEP_AMT_PERCENT",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "independentPercent",
+    "originalFieldName": "Independent Percent",
+    "rule": "If Independent Percent = 0 then blank"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "floatRateCurrency",
+    "originalFieldName": "PRIMARY_CURRENCY",
+    "rule": "If PRIMARY_CURRENCY is blank then take CE_NOTIONAL_CCY, else take PRIMARY_CURRENCY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "floatRateCurrency",
+    "originalFieldName": "Float Rate Currency",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "initialPaymentPayer",
+    "originalFieldName": "INT_PAY_PAYER",
+    "rule": "If TRP_PAY_REC = PAY THEN TRADING_PARTY else COUNTERPARTY (mappd via SDS file)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "initialPaymentPayer",
+    "originalFieldName": "Initial Payment Payer",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "initialPaymentReceiver",
+    "originalFieldName": "INT_PAY_REC",
+    "rule": "If TRP_PAY_REC = PAY THEN COUNTERPRARTY, else TRADING_PARTY (mappd via SDS file)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "initialPaymentReceiver",
+    "originalFieldName": "Initial Payment Receiver",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "firstPaymentDate",
+    "originalFieldName": "FIRST_PMT_CPN_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "firstPaymentDate",
+    "originalFieldName": "First Payment Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "masterDocumentTransactionType",
+    "originalFieldName": "DOCS_DOC_TYPE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "masterDocumentTransactionType",
+    "originalFieldName": "Master Document Transaction Type",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "referenceObligation",
+    "originalFieldName": "CE_REF_ISIN_ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "referenceObligation",
+    "originalFieldName": "Reference Obligation",
+    "rule": "if Reference Obligation = XSNOREFOBL00 or XSUNKNOWN000  then take blank otherwise Reference Obligation"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "restructuringEvent",
+    "originalFieldName": "RESTRUC",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "restructuringEvent",
+    "originalFieldName": "Restructuring Event",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "paymentAmount",
+    "originalFieldName": "TRP_AMOUNT",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "paymentAmount",
+    "originalFieldName": "Single Payment Amount/Premium Payment Amount",
+    "rule": "If Single Payment Amount/Premium Payment Amount = 0 then take Initial Payment Amount/Premium Payment Amount"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "singlePaymentCurrencyPremiumPaymentCurrency",
+    "originalFieldName": "TRP_PAY_CCY",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "singlePaymentCurrencyPremiumPaymentCurrency",
+    "originalFieldName": "Single Payment Currency/Premium Payment Currency",
+    "rule": "If Single Payment Currency/Premium Payment Currency is blank then take Initial Payment Currency/Premium Payment Currency"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "singlePaymentDatePremiumPaymentDate",
+    "originalFieldName": "TRP_PAY_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "singlePaymentDatePremiumPaymentDate",
+    "originalFieldName": "Single Payment Date/Premium Payment Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "bookId",
+    "originalFieldName": "Book_CO",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "bookId",
+    "originalFieldName": "Desk ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "riskId",
+    "originalFieldName": "PRIMARY_RISK_ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "riskId",
+    "originalFieldName": "",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "tradeId",
+    "originalFieldName": "TRADE_ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "tradeId",
+    "originalFieldName": "",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "buySell",
+    "originalFieldName": "BUY_SELL_CO",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "buySell",
+    "originalFieldName": "",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "callPut",
+    "originalFieldName": "CALL_PUT_CDSOPT",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "callPut",
+    "originalFieldName": "",
+    "rule": ""
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "counterpartyFullName",
+    "originalFieldName": "Counterparty Full name",
+    "rule": "Derived (no change)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "counterpartyFullName",
+    "originalFieldName": "Counterparty Full name",
+    "rule": "Derived"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "product",
+    "originalFieldName": "Trade_Type",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "product",
+    "originalFieldName": "Product Type",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "productGroup",
+    "originalFieldName": "Product Group",
+    "rule": "If TRADE_TYPE = CREDIT_DEFAULT_SWAPTION then Swaptions, If TRADE_TYPE = IOS or MBX or PO then IOS/MBX/PO else CDS/CDO"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "productGroup",
+    "originalFieldName": "Product Group",
+    "rule": "If DTCC Master Document Transaction Type contains \"Swaptions\" , if DTCC Master Document Transaction Type - IOS then IOS/MBX/PO, else CDS/CDO"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "paymentMultiplier",
+    "originalFieldName": "PAY_FREQ",
+    "rule": "If last digit of PAY_FREQ is “M” then remove “M”. If last digit is “Y” then remove “Y” and multiply by 12."
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "paymentMultiplier",
+    "originalFieldName": "Payment Multiplier",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "recoveryPrice",
+    "originalFieldName": "REFERENCE_PRICE",
+    "rule": "If 100, then take blank"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "recoveryPrice",
+    "originalFieldName": "Recovery Price",
+    "rule": "if product type = FRCDS, take 100-Recovery Price. If Recovery Price is 0 then blank, else Recovery Price"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "calculationAgent",
+    "originalFieldName": "CALC_AGENT",
+    "rule": "Mapped via SDS"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "calculationAgent",
+    "originalFieldName": "Calculation Agent",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "annexDate",
+    "originalFieldName": "CE_ANNEX_DATE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "annexDate",
+    "originalFieldName": "Master Confirm Annex Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "underlyingBuyer",
+    "originalFieldName": "Underlying Buyer",
+    "rule": "If combination of BUY_SELL_CDSOPT & CALL_PUT_CDSOPT = SELLPUT or BUYCALL, then trading_party. Else take counterparty (mapped to SDS)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "underlyingBuyer",
+    "originalFieldName": "Underlying Fixed Rate Payer(Buyer)",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "underlyingSeller",
+    "originalFieldName": "Underlying Seller",
+    "rule": "If combination of BUY_SELL_CDSOPT & CALL_PUT_CDSOPT = SELLPUT or BUYCALL, then counterparty. Else take trading_party (mapped to SDS)"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "underlyingSeller",
+    "originalFieldName": "Underlying Float Rate Payer(Seller)",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "optionMaturity",
+    "originalFieldName": "OPTION_MATURITY",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "optionMaturity",
+    "originalFieldName": "Underlying Scheduled Termination Date",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "strike",
+    "originalFieldName": "STRIKE_RATE_CDSOPT",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "strike",
+    "originalFieldName": "Strike Price",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "exhaustionPoint",
+    "originalFieldName": "CE_TRANCHE_PERCENT_DETACHMENT",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "exhaustionPoint",
+    "originalFieldName": "Exhaustion Point",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "attachmentPoint",
+    "originalFieldName": "CE_TRANCHE_PERCENT_SUBORD",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "attachmentPoint",
+    "originalFieldName": "Attachment Point",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "referencePolicyApplicable",
+    "originalFieldName": "ABS_REFERENCE_POLICY",
+    "rule": "If ABS_REFERENCE_POLICY is N/A or NA then blank. Else ABS_REFERENCE_POLICY"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "referencePolicyApplicable",
+    "originalFieldName": "Reference Policy Applicable",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "stepUpProvisionsApplicable",
+    "originalFieldName": "STEP_UP",
+    "rule": "If STEP_UP = N then blank else STEP_UP"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "stepUpProvisionsApplicable",
+    "originalFieldName": "Step-up Provisions applicable",
+    "rule": "If Step-up Provisions applicable is N then blank"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "interestShortfallCapApplicable",
+    "originalFieldName": "INT_SHORTFALL",
+    "rule": "If INT_SHORTFALL = N then blank, else INT_SHORTFALL"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "interestShortfallCapApplicable",
+    "originalFieldName": "Interest Shortfall Cap applicable",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "interestShortfallCapBasis",
+    "originalFieldName": "ABS_INT_SHORTFALL_CAP",
+    "rule": "If ABS_INT_SHORTFALL_CAP = N/A or NA then blank, else ABS_INT_SHORTFALL_CAP"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "interestShortfallCapBasis",
+    "originalFieldName": "Interest Shortfall Cap Basis",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "interestShortfallCompoundingApplicable",
+    "originalFieldName": "ABS_CUM_INT_SHORTFALL_COMP",
+    "rule": "If ABS_CUM_INT_SHORTFALL_COMP = N then blank, else ABS_CUM_INT_SHORTFALL_COMP"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "interestShortfallCompoundingApplicable",
+    "originalFieldName": "Interest Shortfall Compounding applicable",
+    "rule": "If Interest Shortfall Compounding applicable = N then blank, else Interest Shortfall Compounding applicable"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "optionalEarlyTerminationApplicable",
+    "originalFieldName": "ABS_EARLY_TERM_OPT",
+    "rule": "If ABS_EARLY_TERM_OPT = N then blank else ABS_EARLY_TERM_OPT"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "optionalEarlyTerminationApplicable",
+    "originalFieldName": "Optional Early Termination applicable",
+    "rule": "If Optional Early Termination applicable = N then blank, else Optional Early Termination applicable"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "originalPrincipalAmount",
+    "originalFieldName": "CE_REF_ORIG_ISSUE_AMT",
+    "rule": "IF SUB_CATEGORY = ASSET_BACKED_PRODUCT AND CE_ENTITY_TYPE = SINGLE Then CE_REF_ORIG_ISSUE_AMT, else Blank"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "originalPrincipalAmount",
+    "originalFieldName": "Original Principal Amount",
+    "rule": "If Original Principal Amount = 0 then blank, else Original Principal Amount"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "initialFactor",
+    "originalFieldName": "ABS_INITIAL_FACTOR",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "initialFactor",
+    "originalFieldName": "Initial Factor",
+    "rule": "If Initial Factor = 0 then blank, else Initial Factor"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "insurer",
+    "originalFieldName": "ABS_INSURER",
+    "rule": "If ABS_INSURER = N/A or NA then blank, else ABS_INSURER"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "insurer",
+    "originalFieldName": "Insurer",
+    "rule": "If Insurer = N then blank, else Insurer"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "securedListApplicable",
+    "originalFieldName": "LOAN_SECURED_LIST",
+    "rule": "If LOAN_SECURED_LIST = N then blank, else LOAN_SECURED_LIST"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "securedListApplicable",
+    "originalFieldName": "Secured List Applicable",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "wacCapInterestProvisionApplicable",
+    "originalFieldName": "ABS_WGTED_AVERAGE_CAP",
+    "rule": "If ABS_WGTED_AVERAGE_CAP = N then blank, else ABS_WGTED_AVERAGE_CAP"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "wacCapInterestProvisionApplicable",
+    "originalFieldName": "WAC Cap Interest Provision Applicable",
+    "rule": "If WAC Cap Interest Provision Applicable = N then blank, else WAC Cap Interest Provision Applicable"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "cashSettlementOnly",
+    "originalFieldName": "LOAN_CASH_SETTLEMENT",
+    "rule": "If LOAN_CASH_SETTLEMENT = NOT APPLICABLE then blank, else LOAN_CASH_SETTLEMENT"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "cashSettlementOnly",
+    "originalFieldName": "Cash Settlement Only",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "deliveryOfCommitments",
+    "originalFieldName": "LOAN_DELIVERY_COMMIT",
+    "rule": "If LOAN_DELIVERY_COMMIT = NOT APPLICABLE then blank, else LOAN_DELIVERY_COMMIT"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "deliveryOfCommitments",
+    "originalFieldName": "Delivery of Commitments",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "entityType",
+    "originalFieldName": "CE_ENTITY_TYPE",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "entityType",
+    "originalFieldName": "Product ID",
+    "rule": "Source"
+  },
+  {
+    "system": "DTD",
+    "resultFieldName": "subCategory",
+    "originalFieldName": "SUB_CATGORY",
+    "rule": "Source"
+  },
+  {
+    "system": "DTCC",
+    "resultFieldName": "subCategory",
+    "originalFieldName": "Sub-Product",
+    "rule": "Source"
+  }
+]
