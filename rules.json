@@ -50,7 +50,7 @@
   {
     "system": "DTD",
     "resultFieldName": "counterpartyAccountNumber",
-    "originalFieldName": "DTCC COUNTERPARTY",
+    "originalFieldName": "COUNTERPARTY",
     "rule": "Mapped via SDS File"
   },
   {
@@ -62,7 +62,7 @@
   {
     "system": "DTD",
     "resultFieldName": "dtccAccountNumber",
-    "originalFieldName": "DTCC TRADINGPARTY",
+    "originalFieldName": "TRADING_PARTY",
     "rule": "Mapped via SDS File"
   },
   {
@@ -74,7 +74,7 @@
   {
     "system": "DTD",
     "resultFieldName": "fixedRate",
-    "originalFieldName": "Fixed Rate",
+    "originalFieldName": "FIXED_RT",
     "rule": "If FIXED_RT is not blank, take FIXED_RT. If blank, take which either PAYLEGCOUPON_RATE or RECLEGCOUPON_RATE is not 0. If both 0, take blank"
   },
   {
@@ -86,7 +86,7 @@
   {
     "system": "DTD",
     "resultFieldName": "notionalCCY",
-    "originalFieldName": "NOTIONAL CCY",
+    "originalFieldName": "CE_NOTIONAL_CCY",
     "rule": "If Product Group = IOS/MBX/PO then take CURRENCY_R, else take CE_NOTIONAL_CCY"
   },
   {
@@ -98,7 +98,7 @@
   {
     "system": "DTD",
     "resultFieldName": "notionalAMT",
-    "originalFieldName": "NOTIONAL AMT",
+    "originalFieldName": "NOTIONAL_AMT",
     "rule": "If Product Group = IOS/MBX/PO then take NOTIONAL, else take CE_NOTIONAL"
   },
   {
@@ -110,7 +110,7 @@
   {
     "system": "DTD",
     "resultFieldName": "independentPayer",
-    "originalFieldName": "Independent COUNTERPARTY",
+    "originalFieldName": "COUNTERPARTY",
     "rule": "If COLL_INDEP_AMT_PERCENT less than 0 then take TRADING_PARTY, else COUNTERPARTY"
   },
   {
@@ -122,7 +122,7 @@
   {
     "system": "DTD",
     "resultFieldName": "independentReceiver",
-    "originalFieldName": "Independent TRADINGPARTY",
+    "originalFieldName": "TRADINGPARTY",
     "rule": "If COLL_INDEP_AMT_PERCENT greater or equal 0 then take TRADING_PARTY, else COUNTERPARTY"
   },
   {
@@ -338,7 +338,7 @@
   {
     "system": "DTD",
     "resultFieldName": "bookId",
-    "originalFieldName": "Book_CO",
+    "originalFieldName": "BOOK_CO",
     "rule": "Source"
   },
   {
@@ -410,7 +410,7 @@
   {
     "system": "DTD",
     "resultFieldName": "product",
-    "originalFieldName": "Trade_Type",
+    "originalFieldName": "TRADE_TYPE",
     "rule": "Source"
   },
   {
