@@ -4776,7 +4776,7 @@
     "system": "DTCC",
     "originalValues": {
       "externalId": "60720553",
-      "tradeDate": "19-Oct-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "19-Oct-16",
       "counterpartyAccountNumber": "DTCC CP 12182",
@@ -4839,7 +4839,7 @@
     },
     "derivedValues": {
       "externalId": "60720553",
-      "tradeDate": "19-Oct-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "19-Oct-16",
       "counterpartyAccountNumber": "DTCC CP 12182",
@@ -4905,7 +4905,7 @@
     "system": "DTCC",
     "originalValues": {
       "externalId": "60720640",
-      "tradeDate": "19-Oct-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "19-Oct-16",
       "counterpartyAccountNumber": "DTCC CP 12182",
@@ -4968,7 +4968,7 @@
     },
     "derivedValues": {
       "externalId": "60720640",
-      "tradeDate": "19-Oct-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "19-Oct-16",
       "counterpartyAccountNumber": "DTCC CP 12182",
@@ -5034,7 +5034,7 @@
     "system": "DTCC",
     "originalValues": {
       "externalId": "60685898",
-      "tradeDate": "12-Sep-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-41",
       "effectiveDate": "12-Sep-16",
       "counterpartyAccountNumber": "DTCC CP 5751",
@@ -5097,7 +5097,7 @@
     },
     "derivedValues": {
       "externalId": "60685898",
-      "tradeDate": "12-Sep-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-41",
       "effectiveDate": "12-Sep-16",
       "counterpartyAccountNumber": "DTCC CP 5751",

@@ -4776,7 +4776,7 @@
     "system": "DTD",
     "originalValues": {
       "externalId": "60629434",
-      "tradeDate": "2-Jun-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-41",
       "effectiveDate": "3-Jun-16",
       "counterpartyAccountNumber": "DTD CP 6074",
@@ -4839,7 +4839,7 @@
     },
     "derivedValues": {
       "externalId": "60629434",
-      "tradeDate": "2-Jun-16",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-41",
       "effectiveDate": "3-Jun-16",
       "counterpartyAccountNumber": "DTD CP 6074",
@@ -4905,7 +4905,7 @@
     "system": "DTD",
     "originalValues": {
       "externalId": "60489200",
-      "tradeDate": "17-Nov-15",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-45",
       "effectiveDate": "17-Nov-15",
       "counterpartyAccountNumber": "DTD CP 11095",
@@ -4968,7 +4968,7 @@
     },
     "derivedValues": {
       "externalId": "60489200",
-      "tradeDate": "17-Nov-15",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-45",
       "effectiveDate": "17-Nov-15",
       "counterpartyAccountNumber": "DTD CP 11095",
@@ -5034,7 +5034,7 @@
     "system": "DTD",
     "originalValues": {
       "externalId": "60294055",
-      "tradeDate": "24-Mar-15",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "24-Mar-15",
       "counterpartyAccountNumber": "DTD CP 4983",
@@ -5097,7 +5097,7 @@
     },
     "derivedValues": {
       "externalId": "60294055",
-      "tradeDate": "24-Mar-15",
+      "tradeDate": "10-Feb-17",
       "maturityDate": "12-Jan-43",
       "effectiveDate": "24-Mar-15",
       "counterpartyAccountNumber": "DTD CP 4983",

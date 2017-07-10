@@ -21,6 +21,7 @@ xlsxj({
                 system: "DTD",
                 resultFieldName: key,
                 originalFieldName: record['DTD Field Name'],
+                customDataFieldName: record['Custom Data Field Name'],
                 rule: record['DTD Derived/ Source?']
             };
             rules.push(dtdRule);
@@ -29,6 +30,7 @@ xlsxj({
                 system: "DTCC",
                 resultFieldName: key,
                 originalFieldName: record['DTCC Field Name'],
+                customDataFieldName: record['Custom Data Field Name'],
                 rule: record['DTCC Derived/ Source?']
             };
             rules.push(dtccRule);
